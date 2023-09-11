@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    height: 50vh;
+    background-color: pink;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} .box{
+    background-color: rgb(132, 130, 238);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 200px;
+    height: 200px;
+    display:inline-block;
+}

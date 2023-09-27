@@ -14,6 +14,7 @@ NWA.push("Ice Cube", "Dr Dre");
         console.log("1995, Se reune el grupo")
         console.log(NWA)
 
+        
 const rapero1 = {
         nombre:"Ice Cube",
         edad:17,

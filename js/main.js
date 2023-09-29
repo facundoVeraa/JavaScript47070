@@ -1,45 +1,37 @@
-const NWA = ["Ice Cube", "Dr Dre", "Eazy e", "Mc Ren", "Dj Yella"];
-console.log("1986, se forma el grupo")
-console.log(NWA)
+const Parciales = ["Facundo", "Gabriel", "Francisco", "Lorenzo", "Jeremias"];
+console.log("Matematica discreta, alumnos")
+console.log(Parciales)
 
-NWA.shift();
-console.log("1989, se divide el grupo")
-console.log(NWA);
+Parciales.splice(0, 3);
+console.log("aprobados de 1° parcial")
+console.log(Parciales);
 
-NWA.shift();
-console.log("1992, se divide el grupo")
-console.log(NWA);
+Parciales.unshift("Facundo, Gabriel, Fracisco");
+Parciales.splice(1, 4);
+console.log("aprobados de 2° parcial")
+console.log(Parciales);
 
-NWA.push("Ice Cube", "Dr Dre");
-        console.log("1995, Se reune el grupo")
-        console.log(NWA)
+Parciales.push("Lorenzo");
+        console.log("aprobados de 3° parcial")
+        console.log(Parciales)
 
-        
-const rapero1 = {
-        nombre:"Ice Cube",
-        edad:17,
-        nacimiento:1969,
-}
-const rapero2 = {
-        nombre:"Eazy e",
-        edad:22,
-        nacimiento:1964,
-}
-const rapero3 = {
-        nombre:"Dr Dre",
-        edad:21,
-        nacimiento:1965,
-}
-const rapero4 = {
-        nombre:"Mc Ren",
-        edad:17,
-        nacimiento:1969,
-}
-const rapero5 = {
-        nombre:"Dj Yella",
-        edad:19,
-        nacimiento:1967,
-}
+let alumnos = [
+        {nombre:"Facundo", edad:18, promedio:8},
+        {nombre:"Gabriel", edad:22, promedio:5},
+        {nombre:"Francisco", edad:19, promedio:8},
+        {nombre:"Lorenzo", edad:21, promedio:7},
+        {nombre:"Jeremias", edad:19, promedio:6},
+];
+
+let promedioOcho = alumnos.filter(function(alumno){
+        return alumno.promedio === 8
+});
+console.log(promedioOcho)
+
+let edad = alumnos.find(function(alumno){
+        return alumno.edad === 19
+});
+console.log(edad)
 
 let comando
 while (comando != 'Salir') {

@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./js/main.js">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <button id="color-mode" class="btn">Dark mode</button>
+    <h1>Calculadora JavaSript</h1>
+    <form action="" method="dialog"></form>
+        <input type="text" id="operador1" placeholder="operador 1">
+        <input type="text" id="operacion" placeholder="+, -, *, /">
+        <input type="text" id="operador2" placeholder="operador 2">
+        <input type="submit" value="Calcular" id="calcular" onclick="calcular()">
+        <p id="resultado"></p>
+    </form>
 
 
 
-
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
 </body>
 </html>

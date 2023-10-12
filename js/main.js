@@ -1,63 +1,66 @@
-const Parciales = ["Facundo", "Gabriel", "Francisco", "Lorenzo", "Jeremias"];
-console.log("Matematica discreta, alumnos")
-console.log(Parciales)
+const botonColorMode = document.querySelector("#color-mode");
+const body = document.body;
 
-Parciales.splice(0, 3);
-console.log("aprobados de 1° parcial")
-console.log(Parciales);
+let darkMode = localStorage.getItem("dark-mode");
 
-Parciales.unshift("Facundo, Gabriel, Fracisco");
-Parciales.splice(1, 4);
-console.log("aprobados de 2° parcial")
-console.log(Parciales);
+function activarDarkMode() {
+    body.classList.add("dark-mode");
+    localStorage.setItem("dark-mode", "activado");
+}
 
-Parciales.push("Lorenzo");
-        console.log("aprobados de 3° parcial")
-        console.log(Parciales)
+function desactivarDarkMode() {
+    body.classList.remove("dark-mode");
+    localStorage.setItem("dark-mode", "desactivado");
+}
 
-let alumnos = [
-        {nombre:"Facundo", edad:18, promedio:8},
-        {nombre:"Gabriel", edad:22, promedio:5},
-        {nombre:"Francisco", edad:19, promedio:8},
-        {nombre:"Lorenzo", edad:21, promedio:7},
-        {nombre:"Jeremias", edad:19, promedio:6},
-];
+if (darkMode === "activado"){
+    activarDarkMode();
+} else{
+    desactivarDarkMode();
+}
 
-let promedioOcho = alumnos.filter(function(alumno){
-        return alumno.promedio === 8
-});
-console.log(promedioOcho)
+botonColorMode.addEventListener("click", () => {
+    darkMode = localStorage.getItem("dark-mode");
 
-let edad = alumnos.find(function(alumno){
-        return alumno.edad === 19
-});
-console.log(edad)
+    if (darkMode === "activado") {
+        desactivarDarkMode();
+    } else {
+        activarDarkMode();
+    }
+})
 
-let comando
-while (comando != 'Salir') {
-        comando = prompt('ingrese comando :\n\n-Enviar consulta\n-Parciales\n-Promedio notas\n-Salir');
 
-        switch (comando) {
-        case 'Enviar consulta':
-                let profesor = prompt("Ingrese nombre del profesor");
-                let consulta = prompt("Ingrese su consulta sobre el parcial");
-                alert("Consulta enviada a,  " + profesor);
-                break;
-        case 'Parciales':
-                break;
-        case 'Promedio notas':
-                let notaPrimerParcial = parseInt(prompt("Ingrese la nota obtenida en el 1° parcial"));
-                let notaSegundoParcial = parseInt(prompt("Ingrese la nota obtenida en el 2° parcial"));
-                let notaTercerParcial = parseInt(prompt("Ingrese la nota obtenida en el 3° parcial"));
-                let suma = notaPrimerParcial + notaSegundoParcial + notaTercerParcial;
-                let promedio = suma / 3;
-                alert("Su promedio es " + promedio);
-        if (promedio <= 3) {
-                alert("Estas desaprobado!")
+const txtOp1 = document.getElementById("operador1")
+const txtOperacion = document.getElementById("operacion")
+const txtOp2 = document.getElementById("operador2")
+const btnCalcular = document.getElementById("calcular")
+const pResultado = document.getElementById("resultado")
+
+function calcular(){
+    const operacion = txtOperacion.value
+    const op1 = parseFloat(txtOp1.value)
+    const op2 = parseFloat(txtOp2.value)   
+
+    if((operacion == "+" || operacion == "-" || operacion == "*" || operacion == "/") && !isNaN(op1) && !isNaN(op2)){
+        let resultado;
+        switch(operacion){
+            case "+":
+                resultado = op1 + op2
+                break
+            case "-":
+                resultado = op1 - op2
+                break
+            case "*":
+                resultado = op1*op2
+                break
+            case "/":
+                resultado = op1/op2
+                break
         }
-        else if (promedio >= 4) {
-                alert("Estas aprobado!")
-        }
-        break;
-        } 
+        pResultado.style = "color:black"
+        pResultado.innerText = "= " + resultado
+        }else{
+        pResultado.style = "color:red"
+        pResultado.innerText = "calculo imposible"
+    }
 }

@@ -33,3 +33,43 @@ input{
     width: 225px;
     max-width: 100%;
 }
+
+.carrito-vacio{
+    display: none;
+}
+
+.carrito-comprado{
+    display: none;
+}
+
+.carrito-producto{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(196, 196, 196);
+    padding: 2rem;
+}
+
+.carrito-producto-imagen{
+    width: 4rem;
+}
+
+.carrito-producto-eliminar{
+    border: 0;
+    background-color: transparent;
+    color: red;
+}
+
+.contenedor-carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carrito-acciones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-acciones-total{
+    display: flex;
+}

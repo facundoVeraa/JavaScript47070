@@ -22,73 +22,43 @@
         </nav>
     <button id="color-mode" class="btn">Dark mode</button>
 </header>
-
 <main>
-    <h2 class="tirulo-principal">Carrito</h2>
-        <div class="contenedor-carrito">
-            <p id="carrito-vacio" class="carrito-vacio">Carrito vacio <i class="bi bi-emoji-frown"></i></p>
-            <div id="carrito-productos" class="carrito-productos">
-               <!-- <div class="carrito-producto">
-                    <img src="./assets/img/kumara.png" alt="">
-                    <div class="carrito-procucto-titulo">
-                        <small>Titulo</small>
-                        <h3>Kumara 552</h3>
-                    </div>
-                    <div class="carrito-producto-cantidad">
-                        <small>Cantidad</small>
-                        <p>1</p>
-                    </div>
-                    <div class="carrito-producto-precio">
-                        <small>Precio</small>
-                        <p>$54900</p>
-                    </div>
-                    <div class="carrito-producto-subtotal">
-                        <small>Subtotal</small>
-                        <p>$54900</p>
-                    </div>
-                    <button class="carrito-procucto-eliminar"><i class="bi bi-trash"></i></button>
-                </div>
+    <h2 class="titulo-principal">Carrito</h2>
+    <div class="contenedor-carrito">
+        <p id="carrito-vacio" class="carrito-vacio">Carrito vacío <i class="bi bi-emoji-frown"></i></p>
+        <div class="carrito-productos disabled">
 
-                <div class="carrito-producto">
-                    <img src="./assets/img/kumara blanco.png" alt="">
-                    <div class="carrito-procucto-titulo">
-                        <small>Titulo</small>
-                        <h3>Kumara 552 blanco</h3>
-                    </div>
-                    <div class="carrito-producto-cantidad">
-                        <small>Cantidad</small>
-                        <p>1</p>
-                    </div>
-                    <div class="carrito-producto-precio">
-                        <small>Precio</small>
-                        <p>$54900</p>
-                    </div>
-                    <div class="carrito-producto-subtotal">
-                        <small>Subtotal</small>
-                        <p>$54900</p>
-                    </div>
-                    <button class="carrito-procucto-eliminar"><i class="bi bi-trash"></i></button>
+            <div class="carrito-producto">
+                <img class="carrito-producto-imagen" src="./assets/img/kumara.png" alt="">
+                <div class="carrito-producto-titulo">
+                    <small>Titulo</small>
+                    <h3>Kumara K552</h3>
                 </div>
-            </div>-->
-
-            <div id="carrito-acciones" class="carrito-acciones">
-                <div class="carrito-acciones-izquierda">
-                    <button class="carrito-acciones-vaciar">Vaciar carrito </button>
+                <div class="carrito-producto-cantidad">
+                    <small>Cantidad</small>
+                    <p>1</p>
                 </div>
-                <div class="carrito-acciones-derecha">
-                    <div class="carrito-acciones-total">
-                        <p>total:</p>
-                        <p id="total">$109.800</p>
-                    </div>
-                    <button class="carrito-accion-comprar">Comprar ahora</button>
+                <div class="carrito-producto-precio">
+                    <small>Precio</small>
+                    <p>$54900</p>
                 </div>
+                <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
             </div>
-
-
-
-
         </div>
-
+        <div class="carrito-acciones disabled">
+            <div class="carrito-acciones-izquierda">
+                <button class="carrito-acciones-vaciar">Vaciar carrito</button>
+            </div>
+            <div class="carrito-acciones-derecha">
+                <div class="carrito-acciones-total">
+                    <p>Total:</p>
+                    <p id="total">$54900</p>
+                </div>
+                <button class="carrito-acciones-comprar">Comprar ahora</button>
+            </div>
+        </div>
+        <p class="carrito-comprado disabled">Gracias por tu compra! <i class="bi bi-emoji-heart-eyes"></i></p>
+    </div>
 </main>
 
 <footer>
